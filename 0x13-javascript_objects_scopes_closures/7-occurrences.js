@@ -1,16 +1,10 @@
-#!usr/bin/node
+#!/usr/bin/node
 exports.nbOccurences = function (list, searchElement) {
-  // Initialize a variable to keep track of the count of occurrences
-  let count = 0;
-
-  // Loop through the list using a for...of loop
-  for (const element of list) {
-    // If the current element matches the search element, increment the count
-    if (element === searchElement) {
-      count++;
+  let nOccurrences = 0;
+  for (let i = 0; i < list.length; i++) {
+    if (searchElement === list[i]) {
+      nOccurrences++;
     }
   }
-
-  // Return the count of occurrences
-  return count;
+  return nOccurrences;
 };
