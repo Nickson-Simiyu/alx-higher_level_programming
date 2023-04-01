@@ -1,17 +1,16 @@
 #!/usr/bin/python3
-"""A Python script that takes in a URL, sends a request to the URL, and displays the body of the response (decoded in utf-8).
-"""
-import sys
-import urllib.error
-import urllib.request
-
+"""A Python script that takes in a URL, sends a request to the URL and displays the body of the response (decoded in utf-8)."""
 
 if __name__ == "__main__":
-    url = sys.argv[1]
+    import sys
+    from urllib import request, error
 
-    request = urllib.request.Request(url)
     try:
-        with urllib.request.urlopen(request) as response:
-            print(response.read().decode("ascii"))
-    except urllib.error.HTTPError as e:
-        print("Error code: {}".format(e.code))
+        with request.urlopen(sys.argv[1]) as res:
+            print(res.read().decode('UTF-8'))
+    except error.HTTPError as er:
+        print('Error code:', er.code)
+    except error.URLError as er:
+        print('Error:', er.reason)
+    except ConnectionRefusedError:
+        print('Connection refused: the server is not available or not accepting connections.')
