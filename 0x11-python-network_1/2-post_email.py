@@ -6,6 +6,10 @@ import urllib.request
 
 
 if __name__ == "__main__":
+    if len(sys.argv) < 3:
+        print("Usage: ./2-post_email.py <URL> <email>")
+        sys.exit(1)
+
     url = sys.argv[1]
     value = {"email": sys.argv[2]}
     data = urllib.parse.urlencode(value).encode("ascii")
