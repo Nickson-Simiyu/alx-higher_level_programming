@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-"""A Python script that takes in a URL, sends a request to the URL and displays the value of the X-Request-Id variable found in the header of the response."""
+"""Display body using -X like in curl: GET request to the body.
+Take an argument"""
 import sys
 import urllib.request as urllib
 
