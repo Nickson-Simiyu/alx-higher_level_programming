@@ -39,8 +39,3 @@ Usage: ./100-starwars_characters.js <movie ID>.
 
 101-starwars_characters.js: JavaScript script that uses the Star Wars API to print all characters featured in a given movie in the same order as they are listed in the characters list of the /films/ response.
 Usage: ./101-starwars_characters.js <movie ID>.
-9. Twitter Auth
-
-102-search_twitter.js: JavaScript script that sends a search request to the Twitter API with a given search string.
-Usage: `./102-search_twitter.js .
-Outputs 5 results in the format [<Tweet ID>] <Tweet text> by <Tweet owner name>.
